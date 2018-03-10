@@ -10,10 +10,25 @@ Target Server Type    : MYSQL
 Target Server Version : 50505
 File Encoding         : 65001
 
-Date: 2018-02-17 20:41:52
+Date: 2018-03-09 22:56:24
 */
 
 SET FOREIGN_KEY_CHECKS=0;
+
+-- ----------------------------
+-- Table structure for categoria
+-- ----------------------------
+DROP TABLE IF EXISTS `categoria`;
+CREATE TABLE `categoria` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `nombre` varchar(255) DEFAULT NULL,
+  `descripcion` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- ----------------------------
+-- Records of categoria
+-- ----------------------------
 
 -- ----------------------------
 -- Table structure for cliente
@@ -160,7 +175,7 @@ CREATE TABLE `cms_logs` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=34 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=64 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- ----------------------------
 -- Records of cms_logs
@@ -198,6 +213,36 @@ INSERT INTO `cms_logs` VALUES ('30', '::1', 'Mozilla/5.0 (Windows NT 6.3; Win64;
 INSERT INTO `cms_logs` VALUES ('31', '::1', 'Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.167 Safari/537.36', 'http://localhost:8080/comertec_st/public/admin/logout', 'admin@crudbooster.com se desconectó', '', '1', '2018-02-17 18:49:09', null);
 INSERT INTO `cms_logs` VALUES ('32', '::1', 'Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.167 Safari/537.36', 'http://localhost:8080/comertec_st/public/admin/logout', ' se desconectó', '', null, '2018-02-17 18:49:09', null);
 INSERT INTO `cms_logs` VALUES ('33', '::1', 'Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.167 Safari/537.36', 'http://localhost:8080/comertec_st/public/admin/login', 'Ingreso de admin@crudbooster.com desde la Dirección IP ::1', '', '1', '2018-02-17 18:49:18', null);
+INSERT INTO `cms_logs` VALUES ('34', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.167 Safari/537.36', 'http://localhost/comertec-service/public/admin/login', 'Ingreso de admin@crudbooster.com desde la Dirección IP ::1', '', '1', '2018-02-17 21:53:47', null);
+INSERT INTO `cms_logs` VALUES ('35', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36', 'http://localhost/comertec-service/public/admin/login', 'Ingreso de admin@crudbooster.com desde la Dirección IP ::1', '', '1', '2018-03-02 23:48:47', null);
+INSERT INTO `cms_logs` VALUES ('36', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36', 'http://localhost/comertec-service/public/admin/login', 'Ingreso de admin@crudbooster.com desde la Dirección IP ::1', '', '1', '2018-03-03 09:21:27', null);
+INSERT INTO `cms_logs` VALUES ('37', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36', 'http://localhost/comertec-service/public/admin/logout', 'admin@crudbooster.com se desconectó', '', '1', '2018-03-03 09:22:40', null);
+INSERT INTO `cms_logs` VALUES ('38', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36', 'http://localhost/comertec-service/public/admin/logout', ' se desconectó', '', null, '2018-03-03 09:22:40', null);
+INSERT INTO `cms_logs` VALUES ('39', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36', 'http://localhost/comertec-service/public/admin/login', 'Ingreso de fernando@gmail.com desde la Dirección IP ::1', '', '2', '2018-03-03 09:23:10', null);
+INSERT INTO `cms_logs` VALUES ('40', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36', 'http://localhost/comertec-service/public/admin/logout', 'fernando@gmail.com se desconectó', '', '2', '2018-03-03 09:25:25', null);
+INSERT INTO `cms_logs` VALUES ('41', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36', 'http://localhost/comertec-service/public/admin/login', 'Ingreso de admin@crudbooster.com desde la Dirección IP ::1', '', '1', '2018-03-03 09:25:32', null);
+INSERT INTO `cms_logs` VALUES ('42', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36', 'http://localhost/comertec-service/public/admin/login', 'Ingreso de fernando@gmail.com desde la Dirección IP ::1', '', '2', '2018-03-03 09:41:33', null);
+INSERT INTO `cms_logs` VALUES ('43', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36', 'http://localhost/comertec-service/public/admin/logout', 'fernando@gmail.com se desconectó', '', '2', '2018-03-03 10:51:48', null);
+INSERT INTO `cms_logs` VALUES ('44', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36', 'http://localhost/comertec-service/public/admin/login', 'Ingreso de fernando@gmail.com desde la Dirección IP ::1', '', '2', '2018-03-03 10:51:57', null);
+INSERT INTO `cms_logs` VALUES ('45', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36', 'http://localhost/comertec-service/public/admin/menu_management/add-save', 'Añadir nueva información Equipos en Menu Management', '', '1', '2018-03-03 10:52:28', null);
+INSERT INTO `cms_logs` VALUES ('46', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36', 'http://localhost/comertec-service/public/admin/users/delete-image', 'Eliminar la imagen de Fernando Jimenez en Users Management', '', '1', '2018-03-03 10:54:06', null);
+INSERT INTO `cms_logs` VALUES ('47', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36', 'http://localhost/comertec-service/public/admin/users/edit-save/2', 'Actualizar información Fernando Jimenez en Users Management', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>photo</td><td></td><td>uploads/1/2018-03/speaker3_min.jpg</td></tr><tr><td>password</td><td>$2y$10$NHHVQos1IoaTeP7Q8cPan.P73pA9veZj5Hri6kFk5iM9wppYwuvZy</td><td></td></tr><tr><td>status</td><td></td><td></td></tr></tbody></table>', '1', '2018-03-03 10:54:16', null);
+INSERT INTO `cms_logs` VALUES ('48', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36', 'http://localhost/comertec-service/public/admin/logout', 'fernando@gmail.com se desconectó', '', '2', '2018-03-03 10:54:34', null);
+INSERT INTO `cms_logs` VALUES ('49', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36', 'http://localhost/comertec-service/public/admin/login', 'Ingreso de fernando@gmail.com desde la Dirección IP ::1', '', '2', '2018-03-03 10:54:45', null);
+INSERT INTO `cms_logs` VALUES ('50', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36', 'http://localhost/comertec-service/public/admin/menu_management/add-save', 'Añadir nueva información Ingreso Reparación en Menu Management', '', '1', '2018-03-03 11:03:31', null);
+INSERT INTO `cms_logs` VALUES ('51', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36', 'http://localhost/comertec-service/public/admin/ingreso', 'Intentar ver :name en Ingreso de Reparación', '', '2', '2018-03-03 11:03:37', null);
+INSERT INTO `cms_logs` VALUES ('52', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36', 'http://localhost/comertec-service/public/admin/logout', 'fernando@gmail.com se desconectó', '', '2', '2018-03-03 11:03:41', null);
+INSERT INTO `cms_logs` VALUES ('53', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36', 'http://localhost/comertec-service/public/admin/login', 'Ingreso de fernando@gmail.com desde la Dirección IP ::1', '', '2', '2018-03-03 11:04:05', null);
+INSERT INTO `cms_logs` VALUES ('54', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36', 'http://localhost/comertec-service/public/admin/login', 'Ingreso de admin@crudbooster.com desde la Dirección IP ::1', '', '1', '2018-03-09 22:08:35', null);
+INSERT INTO `cms_logs` VALUES ('55', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36', 'http://localhost/comertec-service/public/admin/login', 'Ingreso de fernando@gmail.com desde la Dirección IP ::1', '', '2', '2018-03-09 22:09:31', null);
+INSERT INTO `cms_logs` VALUES ('56', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36', 'http://localhost/comertec-service/public/admin/menu_management/edit-save/1', 'Actualizar información Clientes en Menu Management', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>color</td><td>aqua</td><td>normal</td></tr><tr><td>sorting</td><td></td><td></td></tr></tbody></table>', '1', '2018-03-09 22:12:08', null);
+INSERT INTO `cms_logs` VALUES ('57', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36', 'http://localhost/comertec-service/public/admin/menu_management/add-save', 'Añadir nueva información Categorias en Menu Management', '', '1', '2018-03-09 22:32:21', null);
+INSERT INTO `cms_logs` VALUES ('58', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36', 'http://localhost/comertec-service/public/admin/menu_management/edit-save/2', 'Actualizar información Datos en Menu Management', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>name</td><td>Equipos</td><td>Datos</td></tr><tr><td>sorting</td><td>2</td><td></td></tr></tbody></table>', '1', '2018-03-09 22:34:21', null);
+INSERT INTO `cms_logs` VALUES ('59', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36', 'http://localhost/comertec-service/public/admin/menu_management/edit-save/2', 'Actualizar información Almacén en Menu Management', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>name</td><td>Datos</td><td>Almacén</td></tr><tr><td>sorting</td><td>2</td><td></td></tr></tbody></table>', '1', '2018-03-09 22:38:45', null);
+INSERT INTO `cms_logs` VALUES ('60', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36', 'http://localhost/comertec-service/public/admin/menu_management/add-save', 'Añadir nueva información Equipos en Menu Management', '', '1', '2018-03-09 22:46:12', null);
+INSERT INTO `cms_logs` VALUES ('61', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36', 'http://localhost/comertec-service/public/admin/categoria', 'Intentar ver :name en Categorias', '', '2', '2018-03-09 22:46:26', null);
+INSERT INTO `cms_logs` VALUES ('62', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36', 'http://localhost/comertec-service/public/admin/logout', 'fernando@gmail.com se desconectó', '', '2', '2018-03-09 22:46:31', null);
+INSERT INTO `cms_logs` VALUES ('63', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36', 'http://localhost/comertec-service/public/admin/login', 'Ingreso de fernando@gmail.com desde la Dirección IP ::1', '', '2', '2018-03-09 22:47:43', null);
 
 -- ----------------------------
 -- Table structure for cms_menus
@@ -218,12 +263,16 @@ CREATE TABLE `cms_menus` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- ----------------------------
 -- Records of cms_menus
 -- ----------------------------
-INSERT INTO `cms_menus` VALUES ('1', 'Clientes', 'Module', 'cliente', 'aqua', 'fa fa-user-plus', '0', '1', '0', '1', null, '2018-02-17 18:15:32', null);
+INSERT INTO `cms_menus` VALUES ('1', 'Clientes', 'Module', 'cliente', 'normal', 'fa fa-user-plus', '0', '1', '0', '1', '1', '2018-02-17 18:15:32', '2018-03-09 22:12:08');
+INSERT INTO `cms_menus` VALUES ('2', 'Almacén', 'Module', 'equipo', 'normal', 'fa fa-headphones', '0', '1', '0', '1', '2', '2018-03-03 10:52:28', '2018-03-09 22:38:45');
+INSERT INTO `cms_menus` VALUES ('3', 'Ingreso Reparación', 'Module', 'ingreso', 'normal', 'fa fa-cog', '0', '1', '0', '1', '3', '2018-03-03 11:03:31', null);
+INSERT INTO `cms_menus` VALUES ('4', 'Categorias', 'Module', 'categoria', 'normal', 'fa fa-th-large', '2', '1', '0', '1', '2', '2018-03-09 22:32:21', null);
+INSERT INTO `cms_menus` VALUES ('5', 'Equipos', 'Module', 'equipo', 'normal', 'fa fa-headphones', '2', '1', '0', '1', '1', '2018-03-09 22:46:12', null);
 
 -- ----------------------------
 -- Table structure for cms_menus_privileges
@@ -234,12 +283,16 @@ CREATE TABLE `cms_menus_privileges` (
   `id_cms_menus` int(11) DEFAULT NULL,
   `id_cms_privileges` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- ----------------------------
 -- Records of cms_menus_privileges
 -- ----------------------------
-INSERT INTO `cms_menus_privileges` VALUES ('1', '1', '2');
+INSERT INTO `cms_menus_privileges` VALUES ('3', '3', '2');
+INSERT INTO `cms_menus_privileges` VALUES ('4', '1', '2');
+INSERT INTO `cms_menus_privileges` VALUES ('5', '4', '2');
+INSERT INTO `cms_menus_privileges` VALUES ('6', '2', '2');
+INSERT INTO `cms_menus_privileges` VALUES ('7', '5', '2');
 
 -- ----------------------------
 -- Table structure for cms_moduls
@@ -258,7 +311,7 @@ CREATE TABLE `cms_moduls` (
   `updated_at` timestamp NULL DEFAULT NULL,
   `deleted_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- ----------------------------
 -- Records of cms_moduls
@@ -275,6 +328,9 @@ INSERT INTO `cms_moduls` VALUES ('9', 'Statistic Builder', 'fa fa-dashboard', 's
 INSERT INTO `cms_moduls` VALUES ('10', 'API Generator', 'fa fa-cloud-download', 'api_generator', '', 'ApiCustomController', '1', '1', '2018-02-17 22:45:32', null, null);
 INSERT INTO `cms_moduls` VALUES ('11', 'Log User Access', 'fa fa-flag-o', 'logs', 'cms_logs', 'LogsController', '1', '1', '2018-02-17 22:45:32', null, null);
 INSERT INTO `cms_moduls` VALUES ('12', 'CLIENTES', 'fa fa-search', 'cliente', 'cliente', 'AdminClienteController', '0', '0', '2018-02-17 18:11:26', null, null);
+INSERT INTO `cms_moduls` VALUES ('13', 'Equipos', 'fa fa-flask', 'equipo', 'equipo', 'AdminEquipoController', '0', '0', '2018-03-03 10:47:56', null, null);
+INSERT INTO `cms_moduls` VALUES ('14', 'Categorias', 'fa fa-inbox', 'categoria', 'categoria', 'AdminCategoriaController', '0', '0', '2018-03-03 10:50:48', null, null);
+INSERT INTO `cms_moduls` VALUES ('15', 'Ingreso de Reparación', 'fa fa-cog', 'ingreso', 'ingreso', 'AdminIngresoController', '0', '0', '2018-03-03 11:01:40', null, null);
 
 -- ----------------------------
 -- Table structure for cms_notifications
@@ -307,7 +363,7 @@ CREATE TABLE `cms_privileges` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- ----------------------------
 -- Records of cms_privileges
@@ -315,6 +371,8 @@ CREATE TABLE `cms_privileges` (
 INSERT INTO `cms_privileges` VALUES ('1', 'Super Administrator', '1', 'skin-red', '2018-02-17 22:45:32', null);
 INSERT INTO `cms_privileges` VALUES ('2', 'Administrador', '0', 'skin-blue', null, null);
 INSERT INTO `cms_privileges` VALUES ('3', 'Secretaria', '0', 'skin-green', null, null);
+INSERT INTO `cms_privileges` VALUES ('4', 'Técnico', '0', 'skin-black', null, null);
+INSERT INTO `cms_privileges` VALUES ('5', 'Cliente', '0', 'skin-purple', null, null);
 
 -- ----------------------------
 -- Table structure for cms_privileges_roles
@@ -332,7 +390,7 @@ CREATE TABLE `cms_privileges_roles` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- ----------------------------
 -- Records of cms_privileges_roles
@@ -352,6 +410,12 @@ INSERT INTO `cms_privileges_roles` VALUES ('12', '1', '1', '1', '1', '0', '2', '
 INSERT INTO `cms_privileges_roles` VALUES ('13', '1', '1', '1', '1', '1', '1', '12', null, null);
 INSERT INTO `cms_privileges_roles` VALUES ('14', '1', '1', '1', '1', '0', '2', '12', null, null);
 INSERT INTO `cms_privileges_roles` VALUES ('15', '1', '1', '1', '1', '0', '3', '12', null, null);
+INSERT INTO `cms_privileges_roles` VALUES ('16', '1', '1', '1', '1', '1', '1', '13', null, null);
+INSERT INTO `cms_privileges_roles` VALUES ('17', '1', '1', '1', '1', '1', '1', '14', null, null);
+INSERT INTO `cms_privileges_roles` VALUES ('18', '1', '1', '1', '1', '0', '2', '13', null, null);
+INSERT INTO `cms_privileges_roles` VALUES ('19', '1', '1', '1', '1', '1', '1', '15', null, null);
+INSERT INTO `cms_privileges_roles` VALUES ('20', '1', '1', '1', '1', '0', '2', '15', null, null);
+INSERT INTO `cms_privileges_roles` VALUES ('21', '1', '1', '1', '1', '0', '2', '14', null, null);
 
 -- ----------------------------
 -- Table structure for cms_settings
@@ -451,8 +515,63 @@ CREATE TABLE `cms_users` (
 -- Records of cms_users
 -- ----------------------------
 INSERT INTO `cms_users` VALUES ('1', 'Super Admin', null, 'admin@crudbooster.com', '$2y$10$BkTs95C1wSlJCO9/ingdku/bCRYNaMk56d2o/.1OfpqBthuNHquwy', '1', '2018-02-17 22:45:32', null, 'Active');
-INSERT INTO `cms_users` VALUES ('2', 'Fernando Jimenez', 'uploads/1/2018-02/descarga.jpg', 'fernando@gmail.com', '$2y$10$NHHVQos1IoaTeP7Q8cPan.P73pA9veZj5Hri6kFk5iM9wppYwuvZy', '2', '2018-02-17 22:56:29', null, null);
+INSERT INTO `cms_users` VALUES ('2', 'Fernando Jimenez', 'uploads/1/2018-03/speaker3_min.jpg', 'fernando@gmail.com', '$2y$10$NHHVQos1IoaTeP7Q8cPan.P73pA9veZj5Hri6kFk5iM9wppYwuvZy', '2', '2018-02-17 22:56:29', '2018-03-03 10:54:16', null);
 INSERT INTO `cms_users` VALUES ('3', 'Lola', 'uploads/1/2018-02/foto_de_carnet.jpg', 'lola@gmail.com', '$2y$10$4UOcXwn.2gtQ/H0mXH6nO.20zsXZPBHuHQpKlhgwfJ5N0G6eM6iPO', '3', '2018-02-17 18:38:21', null, null);
+
+-- ----------------------------
+-- Table structure for detalle_ingreso
+-- ----------------------------
+DROP TABLE IF EXISTS `detalle_ingreso`;
+CREATE TABLE `detalle_ingreso` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `equipo_id` int(11) DEFAULT NULL,
+  `serie` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- ----------------------------
+-- Records of detalle_ingreso
+-- ----------------------------
+
+-- ----------------------------
+-- Table structure for equipo
+-- ----------------------------
+DROP TABLE IF EXISTS `equipo`;
+CREATE TABLE `equipo` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `categoria_id` int(11) DEFAULT NULL,
+  `nombre` varchar(255) DEFAULT NULL,
+  `descripcion` varchar(255) DEFAULT NULL,
+  `modelo` varchar(255) DEFAULT NULL,
+  `imagen` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- ----------------------------
+-- Records of equipo
+-- ----------------------------
+
+-- ----------------------------
+-- Table structure for ingreso
+-- ----------------------------
+DROP TABLE IF EXISTS `ingreso`;
+CREATE TABLE `ingreso` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `cliente_id` int(11) DEFAULT NULL,
+  `fecha_ingreso` date DEFAULT NULL,
+  `fecha_compra` date DEFAULT NULL,
+  `recepcion` varchar(255) DEFAULT NULL,
+  `cms_users_id` int(11) DEFAULT NULL,
+  `documento` varchar(255) DEFAULT NULL,
+  `detalle_reparacion` varchar(255) DEFAULT NULL,
+  `costo_servicio_tecnico` varchar(255) DEFAULT NULL,
+  `estado` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- ----------------------------
+-- Records of ingreso
+-- ----------------------------
 
 -- ----------------------------
 -- Table structure for migrations
